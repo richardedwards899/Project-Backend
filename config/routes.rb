@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
   # routes for users_controller...
-  get 'users' => 'users#index'          # this shows ALL users
-  get 'users/:id' => 'users#show'       # this shows one particular user
+  scope path: "api/" do
+    get 'users' => 'users#index'          # this shows ALL users
+    get 'users/:id' => 'users#show'       # this shows one particular user
+  end
 
   # get 'users/new' => 'users#new'        # returns a form for enter a new user's details
   # post 'users' => 'users#create'        # create a new user using data in the form
-  
+
   # get 'users/:id/edit' => 'users#edit'  # returns a form for editing a user's details
   # put 'users/:id' => 'users#update'     # updates a user using data in the form
   #
