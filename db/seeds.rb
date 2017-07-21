@@ -7,15 +7,32 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
+Report.delete_all
+Input.delete_all
 
-User.create( {
+percy = User.create( {
   name: 'Percy'
   })
 
-User.create( {
+hubert = User.create( {
   name: 'Hubert'
   })
 
-User.create( {
+lawrence = User.create( {
   name: 'Lawrence'
+  })
+
+Report.create({
+  year: 2015,
+  user: percy
+  })
+
+Report.create({
+  year: 2016,
+  user: percy
+  })
+
+Report.create({
+  year: 2017,
+  user: percy
   })
