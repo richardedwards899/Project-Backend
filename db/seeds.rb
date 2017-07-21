@@ -22,17 +22,29 @@ lawrence = User.create( {
   name: 'Lawrence'
   })
 
-Report.create({
+report1 = Report.create({
   year: 2015,
   user: percy
   })
 
-Report.create({
+report2 = Report.create({
   year: 2016,
   user: percy
   })
-
-Report.create({
+#
+report3 = Report.create({
   year: 2017,
   user: percy
+  })
+
+Input.create({
+  name: "Q1 Slider",
+  position: 50,
+  report: report1
+  })
+
+Input.create({
+  name: "Q2 Slider",
+  position: 75,
+  report: report1
   })

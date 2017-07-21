@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
-  # Our routes! We're providing an API, so we don't need to provide *all* the routes.
+  # Our routes! We don't need to provide *all* the routes.
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
-  # routes for users_controller...
   scope path: "api/" do
     get 'users' => 'users#index'          # this shows ALL users
     get 'users/:id' => 'users#show'       # this shows one particular user
+
+    get 'users/:id/reports'=> 'reports#show_user_reports' # this shows all reports for one user
   end
 
   # get 'users/new' => 'users#new'        # returns a form for enter a new user's details
