@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get 'users/:id' => 'users#show'       # this shows one particular user
 
     get 'users/:id/reports'=> 'reports#show_user_reports' # this shows all reports for one user
+    get 'users/:id/reports/:r_id'=> 'reports#show' # this a particular report for one user
+
   end
 
   # get 'users/new' => 'users#new'        # returns a form for enter a new user's details
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
 
 
 
-
+  ##################################################################################################
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
