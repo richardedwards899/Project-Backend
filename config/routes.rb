@@ -4,13 +4,23 @@ Rails.application.routes.draw do
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
   scope path: "api/" do
+
+    #Restful routes for users_controller.
     get 'users' => 'users#index'          # this shows ALL users
     get 'users/:id' => 'users#show'       # this shows one particular user
 
-    get 'users/:id/reports'=> 'reports#show_user_reports' # this shows all reports for one user
-    get 'users/:id/reports/:r_id'=> 'reports#show' # this a particular report for one user
+    #Non-restful routes for users_controller
+    get 'users/:id/reports'=> 'users#show_user_reports'                 # this shows all reports for one user
+    get 'users/:id/reports/:r_id'=> 'users#show_report'                 # this a particular report for one user
+    get 'users/:id/reports/:r_id/inputs' => 'users#show_report_inputs'  # this shows ALL inputs for a user's report
 
-    get 'users/:id/reports/:r_id/inputs' => 'inputs#show_report_inputs'   # this shows ALL inputs for a user's report
+    #Restful routes for reports_controller.
+    get 'reports' => 'reports#index'      # this shows ALL reports
+    get 'reports/:id' => 'reports#show'   # this shows one particular report
+
+    #Restful routes for inputs_controller.
+    get 'inputs' => 'inputs#index'        # this shows ALL inputs
+    get 'inputs/:id' => 'inputs#show'     # this shows one particular input
 
   end
 
