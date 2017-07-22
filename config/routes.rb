@@ -10,9 +10,10 @@ Rails.application.routes.draw do
     get 'users/:id' => 'users#show'       # this shows one particular user
 
     #Non-restful routes for users_controller
-    get 'users/:id/reports'=> 'users#show_user_reports'                 # this shows all reports for one user
-    get 'users/:id/reports/:r_id'=> 'users#show_report'                 # this a particular report for one user
-    get 'users/:id/reports/:r_id/inputs' => 'users#show_report_inputs'  # this shows ALL inputs for a user's report
+    get 'users/:id/reports'=> 'users#show_user_reports'                           # this shows all reports for one user
+    get 'users/:id/reports/:r_id'=> 'users#show_report'                           # this a particular report for one user
+    get 'users/:id/reports/:r_id/inputs' => 'users#show_report_inputs'            # this shows ALL inputs for a user's report
+    get 'users/:id/reports/:r_id/inputs/:i_id' => 'users#show_report_input'       # this shows one particular input
     put 'users/:id/reports/:r_id/inputs/:i_id/:value' => 'users#set_input_value'  # sets a particular input's value to :value
 
     #Restful routes for reports_controller.
@@ -22,8 +23,6 @@ Rails.application.routes.draw do
     #Restful routes for inputs_controller.
     get 'inputs' => 'inputs#index'        # this shows ALL inputs
     get 'inputs/:id' => 'inputs#show'     # this shows one particular input
-
-    #Non-restful routes for inputs_controller
 
   end
 

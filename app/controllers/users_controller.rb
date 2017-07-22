@@ -32,4 +32,10 @@ class UsersController < ApplicationController
     render :json => inputs
   end
 
+# Show one input for a particular report. Corresponds to: GET 'users/:id/reports/:r_id/inputs/:i_id' => 'users#show_report_input'
+  def show_report_input
+    input = User.find(params[:id]).reports.find(params[:r_id]).inputs.find(params[:i_id])
+    render :json => input
+  end
+
 end
