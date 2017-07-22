@@ -3,9 +3,6 @@ Rails.application.routes.draw do
   # Our routes! We don't need to provide *all* the routes.
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
-  # Not sure my routes are restful! For example, inputs#index is not showing ALL inputs, just those associated
-  # with one particular report.
-
   scope path: "api/" do
     get 'users' => 'users#index'          # this shows ALL users
     get 'users/:id' => 'users#show'       # this shows one particular user
@@ -13,7 +10,7 @@ Rails.application.routes.draw do
     get 'users/:id/reports'=> 'reports#show_user_reports' # this shows all reports for one user
     get 'users/:id/reports/:r_id'=> 'reports#show' # this a particular report for one user
 
-    get 'users/:id/report/:r_id/inputs' => 'inputs#index'   # this shows ALL inputs for a user's report
+    get 'users/:id/reports/:r_id/inputs' => 'inputs#show_report_inputs'   # this shows ALL inputs for a user's report
 
   end
 
