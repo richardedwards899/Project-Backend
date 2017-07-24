@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724124534) do
+ActiveRecord::Schema.define(version: 20170724130910) do
 
   create_table "inputs", force: :cascade do |t|
     t.string   "name"
@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 20170724124534) do
 
   create_table "reports", force: :cascade do |t|
     t.integer  "year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "original_user_id"
   end
 
-  add_index "reports", ["user_id"], name: "index_reports_on_user_id"
+  add_index "reports", ["original_user_id"], name: "index_reports_on_original_user_id"
 
 end
