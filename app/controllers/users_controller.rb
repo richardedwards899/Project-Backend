@@ -1,12 +1,15 @@
 class UsersController < ApplicationController
 
-  # before_action :authenticate_user!
+  # Before you do anything, make sure the user is authenticated!
+  before_action :authenticate_user!
 
   # RESTful routes #############################################################################
 
   def index
-    users = User.all
-    render :json => users
+    # user = current_user
+    # render :json => user
+    render json: current_user
+
     # render :json => users.to_json(include: :reports)
   end
 
