@@ -38,4 +38,12 @@ class UsersController < ApplicationController
     render :json => input
   end
 
+# Set one input for a particular report to a value. Corresponds to:
+# PUT 'users/:id/reports/:r_id/inputs/:i_id/:value' => 'users#set_input_value'
+  def set_input_value
+    input = User.find(params[:id]).reports.find(params[:r_id]).inputs.find(params[:i_id])
+    input.update(position: params[:value])
+    render :json => input
+  end
+
 end
