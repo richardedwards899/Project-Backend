@@ -1,7 +1,7 @@
 class Report < ActiveRecord::Base
 
   #sets up database relationships
-  belongs_to :original_user
+  belongs_to :user
   has_many :inputs
 
   # Report automatically has getter and setter methods for the fields in the data table.

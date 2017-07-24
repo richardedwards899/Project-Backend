@@ -11,15 +11,21 @@ Report.delete_all
 Input.delete_all
 
 percy = User.create( {
-  name: 'Percy'
+  email: 'Percy@example.com',
+  password: "password-percy",
+  password_confirmation: "password-percy"
   })
 
 hubert = User.create( {
-  name: 'Hubert'
+  email: 'Hubert@example.com',
+  password: 'password-hubert',
+  password_confirmation: 'password-hubert'
   })
 
 lawrence = User.create( {
-  name: 'Lawrence'
+  email: 'Lawrence@example.com',
+  password: 'password-lawrence',
+  password_confirmation: 'password-lawrence'
   })
 
 report1 = Report.create({
