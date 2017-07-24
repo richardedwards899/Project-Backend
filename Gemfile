@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 gem 'devise'
 
 gem 'awesome_print'
