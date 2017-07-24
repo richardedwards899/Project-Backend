@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class OriginalUser < ActiveRecord::Base
 
   #sets up database relationships
   has_many :reports
