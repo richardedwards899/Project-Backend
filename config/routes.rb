@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  
   # Our routes! We don't need to provide *all* the routes.
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
