@@ -40,7 +40,7 @@ report2 = Report.create({
 #
 report3 = Report.create({
   year: 2017,
-  user: percy
+  user: hubert
   })
 
 Input.create({

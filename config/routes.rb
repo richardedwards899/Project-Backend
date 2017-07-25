@@ -2,10 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :users
+
   # Our routes! We don't need to provide *all* the routes.
   # We'll need to route requests to reports_controller, inputs_controller and users_controller.
 
-  # scope path: "/api/" do
+  scope path: "/api/" do
   #
   #   #Restful routes for users_controller.
   #   get 'user' => 'users#index'          # this shows ALL users
@@ -19,16 +21,15 @@ Rails.application.routes.draw do
   #   put 'users/:id/reports/:r_id/inputs/:i_id/:value' => 'users#set_input_value'  # sets a particular input's value to :value
   #
   #   #Restful routes for reports_controller.
-  #   get 'reports' => 'reports#index'      # this shows ALL reports
+      get 'reports' => 'reports#index'      # this shows ALL reports for the logged in user...
   #   get 'reports/:id' => 'reports#show'   # this shows one particular report
   #
   #   #Restful routes for inputs_controller.
   #   get 'inputs' => 'inputs#index'        # this shows ALL inputs
   #   get 'inputs/:id' => 'inputs#show'     # this shows one particular input
   #
-  # end
+  end
 
-  resources :users
 
   # get 'users/new' => 'users#new'        # returns a form for enter a new user's details
   # post 'users' => 'users#create'        # create a new user using data in the form
