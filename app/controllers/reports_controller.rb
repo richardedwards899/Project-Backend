@@ -6,8 +6,13 @@ class ReportsController < ApplicationController
 
   # We want this route to return the reports for the logged in user
   def index
+
+    # render :json => users.to_json(include: :reports)
+
     reports = current_user.reports
-    render :json => reports
+    # render :json => reports
+
+    render :json => reports.to_json(include: :inputs)
   end
 
   def show
