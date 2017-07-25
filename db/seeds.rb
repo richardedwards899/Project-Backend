@@ -40,12 +40,12 @@ report2 = Report.create({
 #
 report3 = Report.create({
   year: 2017,
-  user: hubert
+  user: percy
   })
 
 Input.create({
   name: "Q1 Slider",
-  position: 50,
+  position: 60,
   report: report1
   })
 
@@ -53,4 +53,28 @@ Input.create({
   name: "Q2 Slider",
   position: 75,
   report: report1
+  })
+
+Input.create({
+  name: "Q1 Slider",
+  position: 20,
+  report: report2
+  })
+
+Input.create({
+  name: "Q2 Slider",
+  position: 33,
+  report: report2
+  })
+
+Input.create({
+  name: "Q1 Slider",
+  position: 10,
+  report: report3
+  })
+
+Input.create({
+  name: "Q2 Slider",
+  position: 83,
+  report: report3
   })
