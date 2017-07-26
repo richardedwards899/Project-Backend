@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   #   #Restful routes for inputs_controller.
   #   get 'inputs' => 'inputs#index'        # this shows ALL inputs
   #   get 'inputs/:id' => 'inputs#show'     # this shows one particular input
+      patch 'inputs/:id/:value' => 'inputs#update' # this updates an input to have the position 'value'
   #
   end
 

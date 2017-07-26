@@ -44,37 +44,37 @@ report3 = Report.create({
   })
 
 Input.create({
-  name: "Q1 Slider",
+  name: "Q1 - To what extent did you manage and control the activities of the subcontractor?",
   position: 25,
   report: report1
   })
 
 Input.create({
-  name: "Q2 Slider",
+  name: "Q2 - When technical issues were encountered on the project, to what extent were you involved in resolving them?",
   position: 50,
   report: report1
   })
 
 Input.create({
-  name: "Q1 Slider",
+  name: "Q1 - To what extent did you manage and control the activities of the subcontractor?",
   position: 0,
   report: report2
   })
 
 Input.create({
-  name: "Q2 Slider",
+  name: "Q2 - When technical issues were encountered on the project, to what extent were you involved in resolving them?",
   position: 50,
   report: report2
   })
 
 Input.create({
-  name: "Q1 Slider",
+  name: "Q1 - To what extent did you manage and control the activities of the subcontractor?",
   position: 100,
   report: report3
   })
 
 Input.create({
-  name: "Q2 Slider",
+  name: "Q2 - When technical issues were encountered on the project, to what extent were you involved in resolving them?",
   position: 75,
   report: report3
   })
